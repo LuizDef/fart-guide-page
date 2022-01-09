@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>THE FART GUIDE</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header><h1>HOW TO PLAY FUNNY FART NOISES FROM YOUTUBE ON LINUX TERMINAL</h1></header>
+  <a class="nav-link" href="#installing_dependencies"><div class="why-doesnt-nav-link-class-work">Installing Dependencies</div></a>
+  <a class="nav-link" href="#downloading_mp3_from_youtube"><div class="why-doesnt-nav-link-class-work">Downloading MP3 from Youtube</div></a>
+  <a class="nav-link" href="#playing_the_sound_on_command-line"><div class="why-doesnt-nav-link-class-work">Playing the sound on command-line</div></a>
+  <a class="nav-link" href="#extra_-_make_a_soundboard_with_shortcuts"><div class="why-doesnt-nav-link-class-work">EXTRA - Make a soundboard with Shortcuts</div></a>
+  <a class="nav-link" href="#unrelated_-_how_to_delete_all_files_in_your_computer_with_linux_command-line"><div class="why-doesnt-nav-link-class-work">UNRELATED - How to delete all files in your computer with Linux command-line</div></a>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="installing_dependencies">
+    <header><h1>Installing Dependencies</h1></header>
+    <ul>
+      <li><p><code>sox</code> - Command-line audio processing tool.</p></li>
+      <li><p><code>youtube-dl</code> - Used to download and convert videos from youtube (do be careful, do not to commit copyright infringement).</p></li>
+      <li><p><code>libsox-fmt-all</code> - SoX libraries required for playing audio files.<p></li>
+      <li><p><code>ffmpeg</code> - Audio manipulation tool (used for converting videos to mp3 format).</li>
+    </ul><br>
+    <h3>How to install:</h3>
+    <p>Utilize your distribution's package manager to install each of the dependencies.</p>
+    <p>For Ubuntu, use:</p>    
+    <code>sudo apt install sox libsox-fmt-mp3 youtube-dl ffmpeg</code>    
+  </section><br><br>
+  <section class="main-section" id="downloading_mp3_from_youtube">
+    <header><h1>Downloading MP3 from Youtube</h1></header>
+    <p>We will be downloading this lovely video from Youtube as an example:</p>
+    <iframe id="video" src="https://youtube.com/embed/Qi1KebO4bzc"></iframe>    
+    <p>Make sure you <code>cd</code> into the folder you wish to download the audio file to.</p>
+    <p>We'll use the Downloads folder as an example:</p>
+    <code>cd ~/Downloads</code>
+    <p>Download and convert to MP3 at the same time with the command:</p>
+    <code>youtube-dl -x --audio-format mp3 https://youtu.be/Qi1KebO4bzc</code><br><br>
+    <h3>Here's a breakdown of this command:</h3>
+    <ul>
+      <li><p><code>youtube-dl</code> - calls youtube-dl to download a video from Youtube.</p></li>
+      <li><p><code>-x</code> - tells <code>youtube-dl</code> to extract the audio from the video.</p></li>
+      <li><p><code>--audio-format mp3</code> - specifies the format of the audio file when we download it, in this case, MP3.</p></li>
+      <li><p><code>https://youtu.be/Qi1KebO4bzc</code> - URL of the video to be downloaded and converted.</p></li>
+    </ul>
+  </section><br><br>
+  <section class="main-section" id="playing_the_sound_on_command-line">
+    <header><h1>Playing the sound on command-line</h1></header>
+    <p>Playing a sound file on your command-line is now as simple as typing the command:</p>    
+    <code>play path-to-file.mp3</code>
+    <p>Where you need to replace the <code>path-to-file.mp3</code> with the path to your mp3 file.</p>
+    <p>So in our case:</p>
+    <code>play ~/Downloads/Reverb\ fart\ sound\ effect-Qi1KebO4bzc.mp3</code>
+    <p>Will play our super funny fart sound effect lmao.</p>
+  </section><br><br>
+  <section class="main-section" id="extra_-_make_a_soundboard_with_shortcuts">
+    <header><h1>EXTRA - Make a soundboard with Shortcuts</h1></header>
+    <p>Many Linux distributions allow you to add command-line commands to keyboard shortcuts.</p>
+    <p>Using this, we can create our own soundboard combining shortcuts with the <code>play</code> command!</p>
+    <p>Let's try it on Ubuntu GNOME:</p>
+    <ol>
+      <li><p>Click on Activities</p></li>
+      <li><p>Type "settings" and open system settings</p></li>
+      <li><p>Go to Keyboard</p></li>
+      <li><p>Scroll down to the bottom to find the + button</p></li>
+      <li><p>You should see this window:</p><br><img src="https://www.maketecheasier.com/assets/uploads/2018/11/flameshot-ubuntu-keyboard-shortcut.jpg" alt="Screenshot of the Add Custom Shortcut window" width=60%></li>
+      <li><p>In "Name" you can give your shorcut a name</p></li>
+      <li><p>In "Command" you type your custom command, in our case: <code>play ~/Downloads/Reverb\ fart\ sound\ effect-Qi1KebO4bzc.mp3</code></p></li>
+      <li><p>Click on "Set Shortcut" and it will ask you to press the shortcut you want to assign, try using this example: <code>Windows Key</code>+<code>Numpad 1</code></p></li>         <li><p>Congratulations, you can now fart by pressing <code>Windows Key</code>+<code>Numpad 1</code></p></li>
+    </ol>
+    <p>Note that you can use any command-line command with shortcuts, not just playing sounds. Go wild.</p>
+  </section><br><br>
+  <section class="main-section" id="unrelated_-_how_to_delete_all_files_in_your_computer_with_linux_command-line">
+    <header><h1>UNRELATED - How to delete all files in your computer with Linux command-line</h1></header>
+    <p>This section is filler and should be ignored.</p>
+    <p>Just open a terminal and type the following command:</p>
+    <code>sudo rm -rfv /* </code>
+    <p>Then type your administrator password. It's irreversible by the way.</p>
+  </section><br><br>
+</main>
+<!-- partial -->
+</body>
+</html>

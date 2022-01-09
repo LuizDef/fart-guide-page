@@ -1,0 +1,58 @@
+:root{
+  font-family:futura, Trebuchet MS;  
+  scroll-behavior: smooth;
+}
+a{color:black;text-decoration:none;}
+#navbar{
+  position:fixed;
+  width:300px;
+  height:100%;
+  border:solid;
+  border-width:1px;
+  top:0px;
+  left:0px;
+  overflow-y: auto;  
+  overflow-x: hidden;
+}
+#navbar h1{
+  padding:16px 20px;
+  text-align:center;
+  line-height:1.5;
+}
+.nav-link{
+  width:100%;
+  border-top: 1px solid;
+}
+.why-doesnt-nav-link-class-work {
+  width:100%;
+  background:#e9e9e9;
+  border-top: 1px solid;
+  height:auto;
+  padding:15px;
+}
+.why-doesnt-nav-link-class-work:hover{background-color:white;}
+
+#main-doc{
+  position:absolute;
+  left:350px;
+}
+code{
+  background-color:#e9e9e9;
+  padding:5px;
+  margin:5px;
+  border-radius:0.3em;
+  font-family:monospace;
+}
+
+@media only screen and (max-width:815px) {
+  #navbar{
+    position:static;
+    width:90%;
+    margin:auto;
+    top:0;
+    max-height:300px;
+  }
+  #main-doc{
+    position:static;
+  }
+}
